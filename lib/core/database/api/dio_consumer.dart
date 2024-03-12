@@ -1,6 +1,8 @@
 import 'package:chef_app/core/database/api/api_consumer.dart';
 import 'package:chef_app/core/database/api/api_interceptors.dart';
 import 'package:chef_app/core/database/api/end_points.dart';
+import 'package:chef_app/core/errors/error_model.dart';
+import 'package:chef_app/core/errors/exceptions.dart';
 import 'package:dio/dio.dart';
 
 class DioConsumer extends ApiConsumer {
