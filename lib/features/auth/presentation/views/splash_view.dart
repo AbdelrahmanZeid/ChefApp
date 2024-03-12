@@ -31,7 +31,7 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   void initState() {
-    //delayedNavigate();
+    delayedNavigate();
     super.initState();
   }
 
@@ -50,7 +50,7 @@ class _SplashViewState extends State<SplashView> {
             ),
             Text(
               AppStrings.chefApp,
-              style: regularStyle(
+              style: boldStyle(
                 color: AppColors.black,
                 fontSize: 36,
               ),

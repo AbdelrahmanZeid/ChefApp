@@ -1,7 +1,7 @@
 class AppStrings {
   static const String chefApp = 'ChefApp';
-  static const String welcomeToChefApp = 'welcomeToChefApp';
-  static const String pleaseChooseYourLanguage = 'pleaseChooseYourLanguage';
+  static const String welcomeToChefApp = 'Welcome To Chef App';
+  static const String pleaseChooseYourLanguage = 'Please Choose Your Language';
   static const String welcomeBack = 'welcomeBack';
   static const String gallery = 'gallery';
   static const String camera = 'camera';
