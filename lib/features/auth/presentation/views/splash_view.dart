@@ -1,9 +1,9 @@
 import 'package:chef_app/core/utils/app_color.dart';
 import 'package:chef_app/core/utils/app_function.dart';
 import 'package:chef_app/core/utils/app_routes.dart';
-import 'package:chef_app/core/utils/app_string.dart';
 import 'package:chef_app/core/utils/app_text_style.dart';
 import 'package:chef_app/core/utils/assets.dart';
+import 'package:chef_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SplashView extends StatefulWidget {
@@ -45,11 +45,11 @@ class _SplashViewState extends State<SplashView> {
           children: [
             Center(
               child: Image.asset(
-               Assets.assetsImagesLogo,
+                Assets.assetsImagesLogo,
               ),
             ),
             Text(
-              AppStrings.chefApp,
+             S.of(context).chefApp,
               style: boldStyle(
                 color: AppColors.black,
                 fontSize: 36,

@@ -1,9 +1,9 @@
 import 'package:chef_app/core/utils/app_color.dart';
 import 'package:chef_app/core/utils/app_function.dart';
-import 'package:chef_app/core/utils/app_string.dart';
 import 'package:chef_app/core/utils/app_text_style.dart';
 import 'package:chef_app/core/utils/assets.dart';
 import 'package:chef_app/core/widgets/custom_elevated_button.dart';
+import 'package:chef_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class ChangeLanguageView extends StatelessWidget {
@@ -36,7 +36,7 @@ class ChangeLanguageView extends StatelessWidget {
                   10,
                 ),
                 Text(
-                  AppStrings.welcomeToChefApp,
+                  S.of(context).welcomeToChefApp,
                   style: boldStyle(
                     color: AppColors.black,
                     fontSize: 32,
@@ -46,7 +46,7 @@ class ChangeLanguageView extends StatelessWidget {
                   20,
                 ),
                 Text(
-                  AppStrings.pleaseChooseYourLanguage,
+                 S.of(context).pleaseChooseYourLanguage,
                   style: regularStyle(
                     color: AppColors.black,
                     fontSize: 22,
@@ -55,18 +55,20 @@ class ChangeLanguageView extends StatelessWidget {
                 addSpace(
                   90,
                 ),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     CustomElevatedButton(
                       bgColor: AppColors.black,
                       title: 'English',
                       width: 140,
+                      onPressed: (){},
                     ),
                     CustomElevatedButton(
                       bgColor: AppColors.black,
                       title: 'العربيه',
                       width: 140,
+                      onPressed: (){},
                     ),
                   ],
                 ),
