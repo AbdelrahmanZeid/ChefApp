@@ -68,7 +68,9 @@ class ChangeLanguageView extends StatelessWidget {
                           title: 'English',
                           width: 140,
                           onPressed: () {
-                            context.read<GlobalCubit>().changeLanguage();
+                            context.read<GlobalCubit>().changeLanguage(
+                                  "en",
+                                );
                           },
                         ),
                         CustomElevatedButton(
@@ -76,7 +78,9 @@ class ChangeLanguageView extends StatelessWidget {
                           title: 'العربيه',
                           width: 140,
                           onPressed: () {
-                            context.read<GlobalCubit>().changeLanguage();
+                            context.read<GlobalCubit>().changeLanguage(
+                                  "ar",
+                                );
                           },
                         ),
                       ],
