@@ -1,10 +1,10 @@
+import 'package:chef_app/core/services/service_locator.dart';
 import 'package:chef_app/core/utils/app_color.dart';
 import 'package:chef_app/core/utils/app_function.dart';
-import 'package:chef_app/core/utils/app_routes.dart';
-import 'package:chef_app/core/utils/app_string.dart';
 import 'package:chef_app/core/utils/app_text_style.dart';
 import 'package:chef_app/core/utils/assets.dart';
 import 'package:chef_app/core/widgets/custom_elevated_button.dart';
+import 'package:chef_app/core/widgets/custom_loading_indicator.dart';
 import 'package:chef_app/core/widgets/custom_text_form_field.dart';
 import 'package:chef_app/features/auth/presentation/cubits/cubit/login_cubit.dart';
 import 'package:chef_app/features/auth/presentation/cubits/cubit/login_state.dart';
@@ -12,6 +12,7 @@ import 'package:chef_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -22,7 +23,7 @@ class LoginView extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: BlocProvider(
-          create: (context) => LoginCubit(),
+          create: (context) => sl<LoginCubit>(),
           child: const LoginViewBody(),
         ),
       ),
@@ -115,24 +116,23 @@ class LoginViewBody extends StatelessWidget {
                       addSpace(
                         55,
                       ),
-                      CustomElevatedButton(
-                        width: 327.w,
-                        height: 50.h,
-                        bgColor: AppColors.primary,
-                        title: S.of(context).sign_in,
-                        onPressed: () {
-                          if (context
-                              .read<LoginCubit>()
-                              .formKey
-                              .currentState!
-                              .validate()) {
-                            navigation(
-                              context,
-                              AppRoutes.profile,
-                            );
-                          }
-                        },
-                      ),
+                      state is LoginLoadingState
+                          ? const CustomLoadingIndicator()
+                          : CustomElevatedButton(
+                              width: 327.w,
+                              height: 50.h,
+                              bgColor: AppColors.primary,
+                              title: S.of(context).sign_in,
+                              onPressed: () {
+                                if (context
+                                    .read<LoginCubit>()
+                                    .formKey
+                                    .currentState!
+                                    .validate()) {
+                                  context.read<LoginCubit>().login();
+                                }
+                              },
+                            ),
                       addSpace(
                         30,
                       ),
