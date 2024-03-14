@@ -41,10 +41,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "deleteMeal": MessageLookupByLibrary.simpleMessage("Delete Meal"),
         "description":
             MessageLookupByLibrary.simpleMessage("Write some Description"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Dont Have Account ?"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "forgetPassword":
-            MessageLookupByLibrary.simpleMessage("Forget Password"),
+            MessageLookupByLibrary.simpleMessage("Forget Password ?"),
         "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
         "le": MessageLookupByLibrary.simpleMessage("L.E"),
         "loginFailed": MessageLookupByLibrary.simpleMessage("Invalid Data"),
@@ -78,7 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Password Changed Sucessfully"),
         "phone_number": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "pleaseChooseYourLanguage":
-            MessageLookupByLibrary.simpleMessage("Please Choose Your Language"),
+            MessageLookupByLibrary.simpleMessage("Please choose your language"),
         "pleaseEnterValidCode":
             MessageLookupByLibrary.simpleMessage("Please Enter Valid Code"),
         "pleaseEnterValidMealDesc": MessageLookupByLibrary.simpleMessage(

@@ -5,6 +5,7 @@
     "welcomeBack": "مرحبا بعودتك",
     "sign_in": "تسجيل الدخول",
     "sign_up": "إنشاء حساب",
+    "dontHaveAccount": "ليس لديك حساب ؟",
     "email": "البريد الاكتروني",
     "name": "الاسم",
     "phone_number": "رقم الهاتف",
@@ -63,7 +64,7 @@
     "gallery": "المعرض",
     "menu": "المينيو",
     "profile": "الملف الشخصي",
-    "deleteMeal":"حذف الوجبة",
-    "category":"الفئة",
-    "noMeals":"لا يوجد وجبات"
+    "deleteMeal": "حذف الوجبة",
+    "category": "الفئة",
+    "noMeals": "لا يوجد وجبات"
 }

@@ -41,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إنشاء كلمة مرور جديدة"),
         "deleteMeal": MessageLookupByLibrary.simpleMessage("حذف الوجبة"),
         "description": MessageLookupByLibrary.simpleMessage("اكتب بعض الوصف"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب ؟"),
         "editProfile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الاكتروني"),

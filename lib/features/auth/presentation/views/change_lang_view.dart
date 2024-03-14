@@ -2,6 +2,7 @@ import 'package:chef_app/core/bloc/cubit/global_cubit.dart';
 import 'package:chef_app/core/bloc/cubit/global_state.dart';
 import 'package:chef_app/core/utils/app_color.dart';
 import 'package:chef_app/core/utils/app_function.dart';
+import 'package:chef_app/core/utils/app_routes.dart';
 import 'package:chef_app/core/utils/app_text_style.dart';
 import 'package:chef_app/core/utils/assets.dart';
 import 'package:chef_app/core/widgets/custom_elevated_button.dart';
@@ -71,6 +72,10 @@ class ChangeLanguageView extends StatelessWidget {
                             context.read<GlobalCubit>().changeLanguage(
                                   "en",
                                 );
+                            navigation(
+                              context,
+                              AppRoutes.login,
+                            );
                           },
                         ),
                         CustomElevatedButton(
@@ -81,6 +86,10 @@ class ChangeLanguageView extends StatelessWidget {
                             context.read<GlobalCubit>().changeLanguage(
                                   "ar",
                                 );
+                            navigation(
+                              context,
+                              AppRoutes.login,
+                            );
                           },
                         ),
                       ],

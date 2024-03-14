@@ -70,10 +70,10 @@ class S {
     );
   }
 
-  /// `Please Choose Your Language`
+  /// `Please choose your language`
   String get pleaseChooseYourLanguage {
     return Intl.message(
-      'Please Choose Your Language',
+      'Please choose your language',
       name: 'pleaseChooseYourLanguage',
       desc: '',
       args: [],
@@ -105,6 +105,16 @@ class S {
     return Intl.message(
       'Regsiter',
       name: 'sign_up',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dont Have Account ?`
+  String get dontHaveAccount {
+    return Intl.message(
+      'Dont Have Account ?',
+      name: 'dontHaveAccount',
       desc: '',
       args: [],
     );
@@ -180,10 +190,10 @@ class S {
     );
   }
 
-  /// `Forget Password`
+  /// `Forget Password ?`
   String get forgetPassword {
     return Intl.message(
-      'Forget Password',
+      'Forget Password ?',
       name: 'forgetPassword',
       desc: '',
       args: [],

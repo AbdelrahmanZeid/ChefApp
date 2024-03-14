@@ -7,12 +7,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-    initServiceLocator();
+  initServiceLocator();
   await sl<CacheHelper>().init();
 
   runApp(
     BlocProvider(
-      create: (context) => sl<GlobalCubit>()..getCachedLang(),
+      create: (
+        context,
+      ) =>
+          sl<GlobalCubit>()..getCachedLang(),
       child: const ChefApp(),
     ),
   );

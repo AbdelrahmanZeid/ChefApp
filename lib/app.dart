@@ -4,6 +4,7 @@ import 'package:chef_app/core/utils/app_function.dart';
 import 'package:chef_app/core/utils/app_routes.dart';
 import 'package:chef_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,6 +14,10 @@ class ChefApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.immersiveSticky,
+    );
+
     return ScreenUtilInit(
       designSize: const Size(
         375,
