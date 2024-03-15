@@ -660,6 +660,16 @@ class S {
     );
   }
 
+  /// `Enter Your mail and we will send you code to rest your password`
+  String get enterYourEmail {
+    return Intl.message(
+      'Enter Your mail and we will send you code to rest your password',
+      name: 'enterYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Camera`
   String get camera {
     return Intl.message(

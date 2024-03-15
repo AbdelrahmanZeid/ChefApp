@@ -8,6 +8,7 @@
     "dontHaveAccount": "ليس لديك حساب ؟",
     "email": "البريد الاكتروني",
     "name": "الاسم",
+    "enterYourEmail": "ادخل بريدك وسوف نرسل لك الكود الخاص بك",
     "phone_number": "رقم الهاتف",
     "password": "كلمة المرور",
     "confirmPassword": "تأكيد كلمة المرور",

@@ -46,6 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "editProfile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الاكتروني"),
+        "enterYourEmail": MessageLookupByLibrary.simpleMessage(
+            "ادخل بريدك وسوف نرسل لك الكود الخاص بك"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
         "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
