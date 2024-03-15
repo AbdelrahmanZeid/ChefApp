@@ -10,6 +10,7 @@ ThemeData getAppTheme() {
     scaffoldBackgroundColor: AppColors.primary,
   );
 }
+
 ThemeData getAppDarkTheme() {
   return ThemeData.dark();
 }
@@ -31,16 +32,14 @@ void navigationWithReplace(context, String path) {
 }
 
 Widget addSpace([
-  double height=0,
-  double width=0,
+  double height = 0,
+  double width = 0,
 ]) {
   return SizedBox(
     height: height.h,
     width: width.w,
   );
 }
-
-
 
 void showToast({required String message, required ToastStates states}) {
   Fluttertoast.showToast(
@@ -67,4 +66,3 @@ Color toastColor(ToastStates states) {
       return Colors.orange;
   }
 }
-

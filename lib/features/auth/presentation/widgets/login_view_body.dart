@@ -1,6 +1,7 @@
-
 import 'package:chef_app/core/utils/app_color.dart';
 import 'package:chef_app/core/utils/app_function.dart';
+import 'package:chef_app/core/utils/app_routes.dart';
+import 'package:chef_app/core/utils/app_string.dart';
 import 'package:chef_app/core/utils/app_text_style.dart';
 import 'package:chef_app/core/utils/assets.dart';
 import 'package:chef_app/core/widgets/custom_elevated_button.dart';
@@ -30,7 +31,19 @@ class LoginViewBody extends StatelessWidget {
             horizontal: 16,
           ),
           child: BlocConsumer<LoginCubit, LoginState>(
-            listener: (context, state) {},
+            listener: (context, state) {
+              if (state is LoginSuccessState) {
+                showToast(
+                  message: AppStrings.loginSucessfully,
+                  states: ToastStates.success,
+                );
+              } else if (state is LoginFailuerState) {
+                showToast(
+                  message: state.message,
+                  states: ToastStates.error,
+                );
+              }
+            },
             builder: (context, state) {
               return Form(
                 key: context.read<LoginCubit>().formKey,
@@ -112,6 +125,10 @@ class LoginViewBody extends StatelessWidget {
                                     .currentState!
                                     .validate()) {
                                   context.read<LoginCubit>().login();
+                                  navigation(
+                                    context,
+                                    AppRoutes.sendCode,
+                                  );
                                 }
                               },
                             ),

@@ -17,7 +17,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: AppRoutes.initialRoute,
       builder: (context, GoRouterState state) {
-        return const SplashView();
+        return const SendCodeView();
       },
     ),
     GoRoute(
@@ -32,12 +32,12 @@ final GoRouter router = GoRouter(
         return const LoginView();
       },
     ),
-    GoRoute(
-      path: AppRoutes.sendCode,
-      builder: (context, GoRouterState state) {
-        return const SendCodeView();
-      },
-    ),
+    // GoRoute(
+    //   path: AppRoutes.sendCode,
+    //   builder: (context, GoRouterState state) {
+    //     return const SendCodeView();
+    //   },
+    // ),
     GoRoute(
       path: AppRoutes.resetpassword,
       builder: (context, GoRouterState state) {
