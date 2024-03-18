@@ -72,7 +72,7 @@ class SendCodeViewBody extends StatelessWidget {
                           .currentState!
                           .validate()) {
                         context.read<SendCodeCubit>().sendCode();
-                        navigation(
+                        navigationWithReplace(
                           context,
                           AppRoutes.resetpassword,
                         );

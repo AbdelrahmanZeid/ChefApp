@@ -5,6 +5,16 @@ class ResetPasswordView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold(
+      body: ResetPasswordViewBody(),
+    );
+  }
+}
+class ResetPasswordViewBody extends StatelessWidget {
+  const ResetPasswordViewBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
