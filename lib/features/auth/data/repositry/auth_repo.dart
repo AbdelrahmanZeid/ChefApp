@@ -24,4 +24,19 @@ class AuthRepo {
       );
     }
   }
+
+  Future<Either<String, String>> sendCode(String email) async {
+    try {
+      final response = await sl<ApiConsumer>().post(EndPoint.sendCode, data: {
+        ApiKeys.email: email,
+      });
+      return Right(
+        email,
+      );
+    } on ServerException catch (e) {
+      return Left(
+        e.errorModel.errorMessage,
+      );
+    }
+  }
 }

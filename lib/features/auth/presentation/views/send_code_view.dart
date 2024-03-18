@@ -1,8 +1,12 @@
+import 'package:chef_app/core/services/service_locator.dart';
 import 'package:chef_app/core/utils/app_color.dart';
+import 'package:chef_app/features/auth/data/repositry/auth_repo.dart';
+import 'package:chef_app/features/auth/presentation/cubits/send_code_cubit/cubit/send_code_cubit.dart';
 
 import 'package:chef_app/features/auth/presentation/widgets/send_code_view_body.dart';
 import 'package:chef_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SendCodeView extends StatelessWidget {
   const SendCodeView({super.key});
@@ -21,7 +25,10 @@ class SendCodeView extends StatelessWidget {
           ),
         ),
       ),
-      body: const SendCodeViewBody(),
+      body: BlocProvider(
+        create: (context) => sl<SendCodeCubit>(),
+        child: const SendCodeViewBody(),
+      ),
     );
   }
 }
