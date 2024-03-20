@@ -12,6 +12,7 @@
     "name": "Name",
     "phone_number": "Phone Number",
     "password": "Password",
+    "welcome": "welcome",
     "confirmPassword": "Confirm Password",
     "forgetPassword": "Forget Password ?",
     "sendResetLink": "Send Reset Link",

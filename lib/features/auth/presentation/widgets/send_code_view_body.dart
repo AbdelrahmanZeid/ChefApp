@@ -24,7 +24,6 @@ class SendCodeViewBody extends StatelessWidget {
       ),
       child: BlocConsumer<SendCodeCubit, SendCodeState>(
         listener: (context, state) {
-          // TODO: implement listener
         },
         builder: (context, state) {
           return Form(

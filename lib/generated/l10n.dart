@@ -180,6 +180,16 @@ class S {
     );
   }
 
+  /// `welcome`
+  String get welcome {
+    return Intl.message(
+      'welcome',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Confirm Password`
   String get confirmPassword {
     return Intl.message(

@@ -121,6 +121,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "sign_up": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "upladPhoto": MessageLookupByLibrary.simpleMessage("اضافة صورة"),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحبا"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبا بعودتك"),
         "welcomeToChefApp":
             MessageLookupByLibrary.simpleMessage("مرحبا بك في تطبيق شيف"),

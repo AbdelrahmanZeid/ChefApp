@@ -1,7 +1,6 @@
 
-import 'package:chef_app/core/database/api/end_points.dart';
-import 'package:chef_app/core/database/cache/cache_helper.dart';
-import 'package:dio/dio.dart';
+
+ import 'package:dio/dio.dart';
 
 class ApiInterceptors extends Interceptor {
   @override

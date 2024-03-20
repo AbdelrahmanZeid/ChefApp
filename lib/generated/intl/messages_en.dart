@@ -118,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_in": MessageLookupByLibrary.simpleMessage("Login"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Regsiter"),
         "upladPhoto": MessageLookupByLibrary.simpleMessage("Uplad Photo"),
+        "welcome": MessageLookupByLibrary.simpleMessage("welcome"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back"),
         "welcomeToChefApp":
             MessageLookupByLibrary.simpleMessage("Welcome To Chef App"),

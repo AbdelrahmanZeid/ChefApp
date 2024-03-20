@@ -1,6 +1,5 @@
 import 'package:chef_app/core/services/service_locator.dart';
 import 'package:chef_app/core/utils/app_color.dart';
-import 'package:chef_app/features/auth/data/repositry/auth_repo.dart';
 import 'package:chef_app/features/auth/presentation/cubits/send_code_cubit/cubit/send_code_cubit.dart';
 
 import 'package:chef_app/features/auth/presentation/widgets/send_code_view_body.dart';

@@ -39,4 +39,28 @@ class AuthRepo {
       );
     }
   }
+
+  // Future<Either<String, String>> resetPassword({
+  //   required String email,
+  //   required String password,
+  //   required String confirmPassword,
+  //   required String code,
+  // }) async {
+  //   try {
+  //     final response =
+  //         await sl<ApiConsumer>().post(EndPoint.changeForgottenPassword, data: {
+  //       ApiKeys.email: email,
+  //       ApiKeys.password: email,
+  //       ApiKeys.confirmPassword: email,
+  //       ApiKeys.code: email,
+  //     });
+  //     return Right(
+  //       response[ApiKeys.message],
+  //     );
+  //   } on ServerException catch (e) {
+  //     return Left(
+  //       e.errorModel.errorMessage,
+  //     );
+  //   }
+  // }
 }
