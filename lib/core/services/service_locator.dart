@@ -5,6 +5,7 @@ import 'package:chef_app/core/database/cache/cache_helper.dart';
 import 'package:chef_app/features/auth/data/repositry/auth_repo.dart';
 import 'package:chef_app/features/auth/presentation/cubits/login_cubit/login_cubit.dart';
 import 'package:chef_app/features/auth/presentation/cubits/send_code_cubit/cubit/send_code_cubit.dart';
+import 'package:chef_app/features/home/presentation/cubits/cubit/home_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
@@ -21,6 +22,9 @@ void initServiceLocator() {
     () => LoginCubit(
       sl(),
     ),
+  );
+  sl.registerLazySingleton(
+    () => HomeCubit(),
   );
   sl.registerLazySingleton(
     () => SendCodeCubit(
