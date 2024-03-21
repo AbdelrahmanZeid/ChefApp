@@ -4,6 +4,7 @@ import 'package:chef_app/features/auth/presentation/views/login_view.dart';
 import 'package:chef_app/features/auth/presentation/views/reset_password_view.dart';
 import 'package:chef_app/features/auth/presentation/views/send_code_view.dart';
 import 'package:chef_app/features/auth/presentation/views/splash_view.dart';
+import 'package:chef_app/features/home/presentation/views/home_view.dart';
 import 'package:chef_app/features/menu/presentation/views/add_meal_view.dart';
 import 'package:chef_app/features/menu/presentation/views/menu_view.dart';
 import 'package:chef_app/features/profile/presentation/views/chaneg_password_view.dart';
@@ -36,6 +37,12 @@ final GoRouter router = GoRouter(
       path: AppRoutes.sendCode,
       builder: (context, GoRouterState state) {
         return const SendCodeView();
+      },
+    ),
+    GoRoute(
+      path: AppRoutes.home,
+      builder: (context, GoRouterState state) {
+        return const HomeView();
       },
     ),
     GoRoute(
@@ -86,6 +93,7 @@ final GoRouter router = GoRouter(
 
 class AppRoutes{
   static const String initialRoute="/";
+  static const String home="/home";
   static const String chanegLanguage= '/changelanguage';
   static const String login= '/login';
   static const String setting= '/setting';

@@ -11,6 +11,7 @@ import 'package:chef_app/features/auth/presentation/cubits/login_cubit/login_cub
 import 'package:chef_app/features/auth/presentation/cubits/login_cubit/login_state.dart';
 import 'package:chef_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -101,11 +102,19 @@ class LoginViewBody extends StatelessWidget {
                       addSpace(
                         24,
                       ),
-                      Text(
-                        S.of(context).forgetPassword,
-                        style: regularStyle(
-                          fontSize: 22,
-                          color: AppColors.black,
+                      GestureDetector(
+                        onTap: () {
+                          navigation(
+                            context,
+                            AppRoutes.sendCode,
+                          );
+                        },
+                        child: Text(
+                          S.of(context).forgetPassword,
+                          style: regularStyle(
+                            fontSize: 22,
+                            color: AppColors.black,
+                          ),
                         ),
                       ),
                       addSpace(
@@ -127,7 +136,7 @@ class LoginViewBody extends StatelessWidget {
                                   context.read<LoginCubit>().login();
                                   navigation(
                                     context,
-                                    AppRoutes.sendCode,
+                                    AppRoutes.home,
                                   );
                                 }
                               },
