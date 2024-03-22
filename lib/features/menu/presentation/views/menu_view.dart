@@ -1,10 +1,10 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:chef_app/core/utils/app_color.dart';
+import 'package:chef_app/core/utils/app_function.dart';
+import 'package:chef_app/core/utils/app_routes.dart';
 import 'package:chef_app/core/widgets/custom_elevated_button.dart';
 import 'package:chef_app/features/menu/presentation/widgets/menu_item_widget.dart';
 import 'package:chef_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MenuView extends StatelessWidget {
   const MenuView({super.key});
@@ -20,6 +20,12 @@ class MenuView extends StatelessWidget {
           child: Column(
             children: [
               CustomElevatedButton(
+                onPressed: () {
+                  navigation(
+                    context,
+                    AppRoutes.addMeal,
+                  );
+                },
                 bgColor: AppColors.primary,
                 title: S.of(context).addDishToMenu,
               ),

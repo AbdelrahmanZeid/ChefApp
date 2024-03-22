@@ -1,3 +1,6 @@
+import 'package:chef_app/core/database/api/end_points.dart';
+import 'package:chef_app/core/database/cache/cache_helper.dart';
+import 'package:chef_app/core/services/service_locator.dart';
 import 'package:chef_app/core/utils/app_color.dart';
 import 'package:chef_app/core/utils/app_function.dart';
 import 'package:chef_app/core/utils/app_routes.dart';
@@ -22,9 +25,14 @@ class _SplashViewState extends State<SplashView> {
     ).then((
       value,
     ) {
-      navigationWithReplace(
+
+      sl<CacheHelper>().getData(key: ApiKeys.token,)==null?
+      navigation(
         context,
         AppRoutes.chanegLanguage,
+      ): navigation(
+        context,
+        AppRoutes.home,
       );
     });
   }
