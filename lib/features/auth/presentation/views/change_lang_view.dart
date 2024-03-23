@@ -72,6 +72,10 @@ class ChangeLanguageView extends StatelessWidget {
                             context.read<GlobalCubit>().changeLanguage(
                                   "en",
                                 );
+                            navigationWithReplace(
+                              context,
+                              AppRoutes.login,
+                            );
                           },
                         ),
                         CustomElevatedButton(
@@ -82,24 +86,16 @@ class ChangeLanguageView extends StatelessWidget {
                             context.read<GlobalCubit>().changeLanguage(
                                   "ar",
                                 );
+                            navigationWithReplace(
+                              context,
+                              AppRoutes.login,
+                            );
                           },
                         ),
                       ],
                     ),
                     addSpace(
                       50,
-                    ),
-                    CustomElevatedButton(
-                      bgColor: AppColors.black,
-                      title:S.of(context).welcome,
-                      width: 315,
-                      height: 70,
-                      onPressed: () {
-                        navigationWithReplace(
-                          context,
-                          AppRoutes.login,
-                        );
-                      },
                     ),
                   ],
                 ),

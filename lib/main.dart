@@ -13,7 +13,7 @@ void main() async {
 
   runApp(
     MultiBlocProvider(
-      providers: [
+      providers: [ 
         BlocProvider(
           create: (
             context,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:go_router/go_router.dart';
+import 'package:image_picker/image_picker.dart';
 
 ThemeData getAppTheme() {
   return ThemeData(
@@ -64,5 +65,16 @@ Color toastColor(ToastStates states) {
       return Colors.yellow;
     case ToastStates.wrining:
       return Colors.orange;
+  }
+}
+
+ Future<XFile?> pickImage(ImageSource source) async {
+  XFile? image = await ImagePicker().pickImage(
+    source: source,
+  );
+  if(image !=null){
+    return image;
+  }else{
+    return null;
   }
 }

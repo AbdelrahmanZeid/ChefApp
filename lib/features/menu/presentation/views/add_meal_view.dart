@@ -1,9 +1,12 @@
 import 'package:chef_app/core/utils/app_color.dart';
-import 'package:chef_app/core/utils/app_text_style.dart';
+import 'package:chef_app/core/utils/app_function.dart';
 import 'package:chef_app/core/utils/assets.dart';
+import 'package:chef_app/core/widgets/custom_elevated_button.dart';
+import 'package:chef_app/core/widgets/custom_text_form_field.dart';
+import 'package:chef_app/features/menu/presentation/widgets/image_picker_dialog.dart';
 import 'package:chef_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AddMealView extends StatelessWidget {
   const AddMealView({super.key});
@@ -11,6 +14,7 @@ class AddMealView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           S
@@ -25,69 +29,102 @@ class AddMealView extends StatelessWidget {
           24,
         ),
         child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Stack(
-                children: [
-                  Image.asset(
-                    Assets.assetsImagesAvatar,
-                  ),
-                  Positioned.directional(
-                    bottom: -8,
-                    end: -8,
-                    textDirection: Directionality.of(
-                      context,
-                    ),
-                    child: IconButton(
-                      onPressed: () {
-                        showDialog(
-                            context: context,
-                            builder: (_) {
-                              return Dialog(
-                                backgroundColor: AppColors.black12,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    ListTile(
-                                      leading: const Icon(
-                                        Icons.camera_alt,
-                                        color: AppColors.primary,
-                                      ),
-                                      title: Text(
-                                        S.of(context).camera,
-                                        style: regularStyle(
-                                          color: AppColors.primary,
-                                        ),
-                                      ),
-                                    ),
-                                    ListTile(
-                                      leading: const Icon(
-                                        Icons.photo,
-                                        color: AppColors.primary,
-                                      ),
-                                      title: Text(
-                                        S.of(context).gallery,
-                                        style: regularStyle(
-                                          color: AppColors.primary,
-                                        ),
-                                      ),
-                                    ),
-                                    
-                                  ],
-                                ),
-                              );
-                            });
-                      },
-                      icon: const Icon(
-                        Icons.add,
-                        size: 35,
-                        color: AppColors.primary,
+          child: Form(
+            child: Column(
+              children: [
+                Stack(
+                  children: [
+                    Center(
+                      child: Image.asset(
+                        Assets.assetsImagesAvatar,
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                    Positioned.directional(
+                      bottom: -8,
+                      end: 100,
+                      textDirection: Directionality.of(
+                        context,
+                      ),
+                      child: IconButton(
+                        onPressed: () {
+                          showDialog(
+                              context: context,
+                              builder: (_) {
+                                return ImagePickerDialog(
+                                  cameraOnTap: () async {
+                                    goBack(
+                                      context,
+                                    );
+                                    await pickImage(
+                                      ImageSource.camera,
+                                    ).then((value) => null);
+                                  },
+                                  gallaeryOnTap: () async {
+                                    goBack(
+                                      context,
+                                    );
+                                    await pickImage(
+                                      ImageSource.gallery,
+                                    ).then((value) => null);
+                                  },
+                                );
+                              });
+                        },
+                        icon: const Icon(
+                          Icons.add,
+                          size: 35,
+                          color: AppColors.black,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                addSpace(
+                  15,
+                ),
+                CustomTextFormField(
+                  hint: S
+                      .of(
+                        context,
+                      )
+                      .mealName,
+                  controller: TextEditingController(),
+                ),
+                addSpace(
+                  15,
+                ),
+                CustomTextFormField(
+                  hint: S
+                      .of(
+                        context,
+                      )
+                      .mealPrice,
+                  controller: TextEditingController(),
+                ),
+                addSpace(
+                  15,
+                ),
+                CustomTextFormField(
+                  hint: S
+                      .of(
+                        context,
+                      )
+                      .mealDesc,
+                  controller: TextEditingController(),
+                ),
+                addSpace(
+                  16,
+                ),
+                CustomElevatedButton(
+                  bgColor: AppColors.primary,
+                  title: S
+                      .of(
+                        context,
+                      )
+                      .addToMenu,
+                ),
+              ],
+            ),
           ),
         ),
       ),
